@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ukuland</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Ukuland</h1>
+    </header>
+    <div class="wrapper">
+        <aside class="left-sidebar" id="left-sidebar">
+            <div id="categories-section">
+                <h2>
+                    Categories
+                </h2>
+                <ul class="categories">
+                    <li class="category">Ukuleles</li>
+                    <li class="category">Guitars</li>
+                    <li class="category">Accessories</li>
+                    <li class="category">Collections of sheet music</li>
+                </ul>
+                <button class="orders" id="orders-button" type="button">
+                    My order
+                </button>
+            </div>
+            <div id="shopping-card-section" style="display: none;"></div>
+        </aside>
+
+        <div class="main-content">
+            <div id="products-section">
+                <h2>Goods in category</h2>
+                <ul id="product-list"></ul>
+            </div>
+        </div>
+
+        <aside class="right-sidebar">
+            <div id="product-info">
+                <h2>
+                    Information about this:
+                </h2>
+                <p id="product-details">
+
+                </p>
+                <button id="buy-button">Buy</button>
+
+                <form class="order-form" id="order-form">
+                    <h4 class="form-header">
+                        Please, make your order
+                    </h4>
+                    <label for="full-name" class="form-item">
+                        Full name:
+                    </label>
+                    <input type="text" id="full-name" name="fullName" required>
+
+                    <label for="city" class="form-item">
+                        Choose city
+                    </label>
+                        <select name="city" id="city" required>
+                            <option value="Kyiv">Kyiv</option>
+                            <option value="Lviv">Lviv</option>
+                            <option value="Odesa">Odesa</option>
+                            <option value="Kharkiv">Kharkiv</option>
+                        </select>
+
+                    <label for="delivery-branch" class="form-item">
+                        Branch post:
+                    </label>
+                    <input type="number" id="delivery-branch" name="deliveryBranch" min="1" required>
+
+                    <label class="form-item">
+                        Choose the system of payment
+                    </label>
+                    <input 
+                        type="radio" 
+                        id="cash-on-delivery" 
+                        name="paymentMethod" 
+                        value="Afterpayment" 
+                        required
+                    >
+                    <label for="cash-on-delivery">
+                        After payment
+                    </label>
+
+                    <input 
+                        type="radio" 
+                        id="card-payment" 
+                        name="paymentMethod" 
+                        value="Card payment" 
+                        required
+                        >
+                    <label for="card-payment">
+                        Card payment
+                    </label>
+
+                    <label for="quantity" class="form-item">Count of products</label>
+                    <input type="number" id="quantity" name="quantity" min="1" required>
+
+                    <label for="comment" class="form-item">Comment</label>
+                    <textarea name="comment" id="comment" placeholder="Super!">
+                        Super!
+                    </textarea>
+                    
+                    <button type="submit" id="form-submit">Confirm</button>
+                </form>
+            </div>
+        </aside>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
